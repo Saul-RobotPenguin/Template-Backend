@@ -1,6 +1,4 @@
 node_modules
 .env
-result.pdf
-
-
+documents
 https://react-pdf.org/

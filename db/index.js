@@ -1,11 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-let MONGODB_URI =
-  process.env.MONGODB_CONNECTION_STRING ||
-  process.env.MONGODB_RIU ||
-  "mongodb://127.0.0.1:27017/TemplateDatabase";
-
+let MONGODB_URI = process.env.MONGODB_CONNECTION_STRING;
 mongoose
   .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() => {
