@@ -59,8 +59,19 @@ const createUsersCoverLetter = async (req, res) => {
       }
       //
       const data = {
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        street_address: req.body.street_address,
+        city: req.body.city,
+        zipcode: req.body.zipcode,
+        email: req.body.email,
+        company_name: req.body.company_name,
+        phone_Num: req.body.phone_Num,
+        job_role: req.body.job_role,
+        skill_requirements1: req.body.skill_requirements1,
+        skill_requirements2: req.body.skill_requirements2,
+        skill_requirements3: req.body.skill_requirements3,
+        content: req.body.content,
       };
 
       carbone.render(
