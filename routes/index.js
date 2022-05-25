@@ -13,6 +13,9 @@ router.get("/templates", controllers.getAllTemplates);
 router.get("/templates/:id", controllers.getSingleTemplate);
 router.post("/templates/:id", controllers.createUsersCoverLetter);
 
+//Updating Template
+router.put("/templates/:id", controllers.updateTemplate);
+
 //Deleting a Template
 router.delete("/templates/:id", controllers.deleteTemplate);
 

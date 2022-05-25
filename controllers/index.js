@@ -96,6 +96,25 @@ const createUsersCoverLetter = async (req, res) => {
   }
 };
 
+//Update Template
+
+const updateTemplate = (req, res) => {
+  try {
+    const { id } = req.params;
+    Template.findByIdAndUpdate(id, req.body, { new: true }, (err, template) => {
+      if (err) {
+        res.status(500).send(err);
+      }
+      if (!template) {
+        res.status(500).send("Template not Found In Database");
+      }
+      return res.status(200).json(template);
+    });
+  } catch (error) {
+    return res.status(500).send(error.message);
+  }
+};
+
 //Delete Template
 
 const deleteTemplate = async (req, res) => {
@@ -116,5 +135,6 @@ module.exports = {
   getAllTemplates,
   getSingleTemplate,
   createUsersCoverLetter,
+  updateTemplate,
   deleteTemplate,
 };
